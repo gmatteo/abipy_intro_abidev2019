@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+ipynb_jsmoldata/
+abipy_talk.slides.html
+.ipynb_checkpoints/
+*.swp
