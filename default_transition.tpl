@@ -7,8 +7,7 @@
 
 {{ super() }}
 
-<script>
-
+<!-- script>
 Reveal.initialize({
 
     // <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
@@ -50,8 +49,8 @@ Reveal.initialize({
     //mouseWheel: false,
 
     // Transition style default/cube/page/concave/zoom/linear/fade/none
-    transition: 'concave', 
-    //transition: 'page', 
+    transition: 'concave',
+    //transition: 'page',
 
     // Transition speed
     //transitionSpeed: 'default', // default/fast/slow
@@ -63,9 +62,6 @@ Reveal.initialize({
     //theme: 'blood' // available themes are in /css/theme
 });
 
-<!--link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme"-->
-<!--link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme"-->
-
-</script>
+</script -->
 
 {% endblock body %}
