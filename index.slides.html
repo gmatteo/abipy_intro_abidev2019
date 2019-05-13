@@ -13256,7 +13256,7 @@ a.anchor-link {
 <ul>
 <li><p>These slides have been generated using <a href="https://jupyter.org">jupyter</a>, <a href="https://github.com/jupyter/nbconvert">nbconvert</a> and <a href="https://revealjs.com/">revealjs</a></p>
 </li>
-<li><p>The notebook can be downloaded from this <a href="https://github.com/gmatteo/abipy_slides_aps_boston_2019">github repo</a></p>
+<li><p>The notebook can be downloaded from this <a href="https://github.com/gmatteo/abipy_intro_abidev2019">github repo</a></p>
 </li>
 <li><p>To install and configure the software, follow these <a href="https://github.com/abinit/abipy#getting-abipy">installation instructions</a></p>
 </li>
@@ -13383,7 +13383,7 @@ https://anaconda.org/abinit/abipy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">embed</span> https://abinit.github.io/abipy/index.html
@@ -13399,7 +13399,7 @@ https://anaconda.org/abinit/abipy
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -13430,7 +13430,7 @@ https://anaconda.org/abinit/abipy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">embed</span> https://nbviewer.jupyter.org/github/abinit/abitutorials/blob/master/abitutorials/index.ipynb
@@ -13446,7 +13446,7 @@ https://anaconda.org/abinit/abipy
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13473,9 +13473,9 @@ https://anaconda.org/abinit/abipy
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="./assets/Data-Analysis.jpg" width="95%" align="center"></p>
 <ul>
-<li>Since AbiPy is not just high-throughput, we'll show how to use the terminal to perform typical operations</li>
+<li>Since AbiPy is not just high-throughput, we'll show how to use the terminal to analyze calculations</li>
 <li>Well, a python script would be much more flexible but the goal here is to show 
-that one can replace <code>grep</code> with   AbiPy</li>
+that one can replace <code>grep</code> with AbiPy</li>
 <li>PS: The majority of the examples will work independently of the file extension (especially if it's a netcdf file)</li>
 </ul>
 <div class="alert alert-warning">
@@ -13489,13 +13489,12 @@ No perl scripts were harmed in the making of this notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Command-line-interface">Command line interface<a class="anchor-link" href="#Command-line-interface">&#182;</a></h2><ul>
 <li><em>abistruct.py</em> ➝ Operate on crystalline structures read from file</li>
-<li><em>abiopen.py</em> ➝ Open output files inside Ipython session</li>
+<li><em>abiopen.py</em> ➝ Open output files inside Ipython, print/visualize file</li>
 <li><em>abicomp.py</em> ➝ Compare multiple files (convergence studies)</li>
 <li><em>abiview.py</em> ➝ Quick visualization of output files</li>
 <li><em>abinp.py</em> ➝ Generate input files for typical calculations</li>
 </ul>
-<p>Use e.g.</p>
-<ul>
+<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h3><ul>
 <li><code>abistruct.py --help</code> for manpage</li>
 <li><code>abistruct.py COMMAND --help</code> for help about <code>COMMAND</code></li>
 </ul>
@@ -13506,6 +13505,7 @@ No perl scripts were harmed in the making of this notebook
 abistruct.py convert si_scf_GSR.nc -f cif
 abiopen.py si_scf_GSR.nc --print
 </pre></div>
+<p>and many more...</p>
 
 </div>
 </div>
@@ -13519,7 +13519,7 @@ abiopen.py si_scf_GSR.nc --print
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abiopen.py si_scf_GSR.nc --print
@@ -13543,7 +13543,7 @@ abiopen.py si_scf_GSR.nc --print
 Name: si_scf_GSR.nc
 Directory: /Users/gmatteo/talks/abipy_intro_abidev2019
 Size: 14.83 kb
-Access Time: Mon May 13 16:24:22 2019
+Access Time: Mon May 13 21:06:04 2019
 Modification Time: Sun May 12 04:20:35 2019
 Change Time: Sun May 12 04:20:35 2019
 
@@ -13613,7 +13613,7 @@ Conduction minimum located at:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py convert si_scf_GSR.nc -f cif
@@ -13679,7 +13679,7 @@ loop_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py spglib si_scf_GSR.nc
@@ -13736,7 +13736,7 @@ Crystal_system: cubic, Lattice_type: cubic, Point_group: m-3m
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py kpath si_scf_GSR.nc
@@ -13756,9 +13756,7 @@ Crystal_system: cubic, Lattice_type: cubic, Point_group: m-3m
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/Users/gmatteo/git_repos/pymatgen/pymatgen/symmetry/bandstructure.py:62: UserWarning: The input structure does not match the expected standard primitive! The path can be incorrect. Use at your own risk.
-  warnings.warn(&#34;The input structure does not match the expected standard primitive! &#34;
-# Abinit Structure
+<pre># Abinit Structure
  natom 2
  ntypat 1
  typat 1 1
@@ -13802,87 +13800,10 @@ Crystal_system: cubic, Lattice_type: cubic, Point_group: m-3m
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="If-you-are-still-using-perl-scripts-to-extract-data-from-the-main-output-file,-consider-this:">If you are still using perl scripts to extract data from the main output file, consider this:<a class="anchor-link" href="#If-you-are-still-using-perl-scripts-to-extract-data-from-the-main-output-file,-consider-this:">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiopen.py gs_dfpt.abo --expose --seaborn
 </pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="assets/abiopen_abo.png" width="75%" align="center"></p>
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Read-structure-from-FILE,-find-little-group-of-k-point,-print-irreps-character-table">Read structure from FILE, find little group of k-point, print irreps character table<a class="anchor-link" href="#Read-structure-from-FILE,-find-little-group-of-k-point,-print-irreps-character-table">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py lgk si_scf_GSR.nc -k <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-================================= Structure =================================
-Full Formula (Si2)
-Reduced Formula: Si
-abc   :   3.866975   3.866975   3.866975
-angles:  60.000000  60.000000  60.000000
-
-Spglib space group info (magnetic symmetries not taken into account).
-Spacegroup: Fd-3m (227), Hall: F 4d 2 3 -1d, Abinit spg_number: 227
-Crystal_system: cubic, Lattice_type: cubic, Point_group: m-3m
-
-  Idx  Symbol    Reduced_Coords              Wyckoff      EqIdx
------  --------  --------------------------  ---------  -------
-    0  Si        +0.00000 +0.00000 +0.00000  (2a)             0
-    1  Si        +0.25000 +0.25000 +0.25000  (2a)             0
-
-
-================================ Little Group ================================
-Kpoint-group: m-3m, Oh (221), Kpoint: [0.0, 0.0, 0.0], Symmorphic: True
- 
-Oh     1+ [1]   2+ [3]   3+ [8]   2+ [6]   4+ [6]  -2- [1]  -2+ [3]  -6- [8]  -2+ [6]  -4+ [6]
-Irrep                                                                                         
-A1g    (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)
-A1u    (1+0j)   (1+0j)   (1+0j)   (1+0j)   (1+0j)  (-1+0j)  (-1+0j)  (-1+0j)  (-1+0j)  (-1+0j)
-A2g    (1+0j)   (1+0j)   (1+0j)  (-1+0j)  (-1+0j)   (1+0j)   (1+0j)   (1+0j)  (-1+0j)  (-1+0j)
-A2u    (1+0j)   (1+0j)   (1+0j)  (-1+0j)  (-1+0j)  (-1+0j)  (-1+0j)  (-1+0j)   (1+0j)   (1+0j)
-Eg     (2+0j)   (2+0j)  (-1+0j)       0j       0j   (2+0j)   (2+0j)  (-1+0j)       0j       0j
-Eu     (2+0j)   (2+0j)  (-1+0j)       0j       0j  (-2+0j)  (-2+0j)   (1+0j)       0j       0j
-T1g    (3+0j)  (-1+0j)       0j  (-1+0j)   (1+0j)   (3+0j)  (-1+0j)       0j  (-1+0j)   (1+0j)
-T1u    (3+0j)  (-1+0j)       0j  (-1+0j)   (1+0j)  (-3+0j)   (1+0j)       0j   (1+0j)  (-1+0j)
-T2g    (3+0j)  (-1+0j)       0j   (1+0j)  (-1+0j)   (3+0j)  (-1+0j)       0j   (1+0j)  (-1+0j)
-T2u    (3+0j)  (-1+0j)       0j   (1+0j)  (-1+0j)  (-3+0j)   (1+0j)       0j  (-1+0j)   (1+0j)
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13896,7 +13817,7 @@ to change output format. `-f None` to disable structure output.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py mp_match si_scf_GSR.nc
@@ -13916,11 +13837,7 @@ to change output format. `-f None` to disable structure output.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/Users/gmatteo/git_repos/pymatgen/pymatgen/ext/matproj.py:115: UserWarning: Non-default endpoint used: https://www.materialsproject.org/rest/v2
-  warnings.warn(&#34;Non-default endpoint used: {}&#34;.format(self.preamble))
-/Users/gmatteo/git_repos/pymatgen/pymatgen/ext/matproj.py:115: UserWarning: Non-default endpoint used: https://www.materialsproject.org/rest/v2
-  warnings.warn(&#34;Non-default endpoint used: {}&#34;.format(self.preamble))
-
+<pre>
 # Found 1 structures in Materials Project database (use `verbose` to get further info)
 
  
@@ -13965,17 +13882,17 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oh-my-gosh,-I'm-stil-using-cut3d-to-export-the-structure-in-a-format-that-other-applications-can-understand!">Oh my gosh, I'm stil using <em>cut3d</em> to export the structure in a format that other applications can understand!<a class="anchor-link" href="#Oh-my-gosh,-I'm-stil-using-cut3d-to-export-the-structure-in-a-format-that-other-applications-can-understand!">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abistruct.py visualize run_si02.abi
+<h4 id="Are-you-still-using-cut3d-to-export-the-structure-in-a-format-that-other-applications-can-understand?">Are you still using <em>cut3d</em> to export the structure in a format that other applications can understand?<a class="anchor-link" href="#Are-you-still-using-cut3d-to-export-the-structure-in-a-format-that-other-applications-can-understand?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abistruct.py visualize run_si02.abi
 </pre></div>
 <p><img src="assets/sio2_vesta.png" width="75%" align="center"></p>
-<h4 id="Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib-(use---application-option)">Supports also <em>ovito</em>, <em>xcrysden</em>, <em>vtk</em>, <em>mayavi</em>, <em>matplotlib</em> (use <em>--application</em> option)<a class="anchor-link" href="#Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib-(use---application-option)">&#182;</a></h4>
+<h4 id="Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib-via---application-option">Supports also <em>ovito</em>, <em>xcrysden</em>, <em>vtk</em>, <em>mayavi</em>, <em>matplotlib</em> via <em>--application</em> option<a class="anchor-link" href="#Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib-via---application-option">&#182;</a></h4>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Call-anaddb-to-compute-ph-bands-and-DOS-from-DDB,-plot-results">Call <em>anaddb</em> to compute ph-bands and DOS from DDB, plot results<a class="anchor-link" href="#Call-anaddb-to-compute-ph-bands-and-DOS-from-DDB,-plot-results">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py ddb ZnSe_hex_qpt_DDB --seaborn
+<h4 id="Call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB">Call <em>anaddb</em> to compute and visualize ph-bands and DOS from DDB<a class="anchor-link" href="#Call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py ddb ZnSe_hex_qpt_DDB --seaborn
 </pre></div>
 
 </div>
@@ -13994,21 +13911,7 @@ to change output format. `-f None` to disable structure output.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Need-to-get-a-quick-look-at-the-Fermi-surface?">Need to get a quick look at the Fermi surface?<a class="anchor-link" href="#Need-to-get-a-quick-look-at-the-Fermi-surface?">&#182;</a></h4><p></p>
 <pre><code>abiview.py fs mgb2_kmesh181818_FATBANDS.nc</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="assets/mgb2_fs.png" width="75%" align="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="assets/mgb2_fs.png" width="65%" align="center"></p>
 <h4 id="Use--a-xsf-for-Xcrysden-or--a-mayavi-for-Mayavi-backend">Use <code>-a xsf</code> for Xcrysden or <code>-a mayavi</code> for Mayavi backend<a class="anchor-link" href="#Use--a-xsf-for-Xcrysden-or--a-mayavi-for-Mayavi-backend">&#182;</a></h4>
 </div>
 </div>
@@ -14016,32 +13919,12 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Want-to-know-what's-happening-in-the-structural-relaxation?">Want to know what's happening in the structural relaxation?<a class="anchor-link" href="#Want-to-know-what's-happening-in-the-structural-relaxation?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview_hist sic_relax_HIST.nc
+<h4 id="Want-to-know-what's-happening-in-the-structural-relaxation?">Want to know what's happening in the structural relaxation?<a class="anchor-link" href="#Want-to-know-what's-happening-in-the-structural-relaxation?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py hist sic_relax_HIST.nc
 </pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="assets/abiview_hist.png" width="75%" align="center"></p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!abiview.py --help | grep &quot;Valid subcommands&quot; -A 2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14082,14 +13965,7 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Use-ElectronBandsPlotter-to-visualize-multiple-band-structures:">Use <em>ElectronBandsPlotter</em> to visualize multiple band structures:<a class="anchor-link" href="#Use-ElectronBandsPlotter-to-visualize-multiple-band-structures:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span>abicomp.py ebands *_GSR.nc
+<h4 id="Use-ElectronBandsPlotter-to-visualize-multiple-band-structures:">Use <em>ElectronBandsPlotter</em> to visualize multiple band structures:<a class="anchor-link" href="#Use-ElectronBandsPlotter-to-visualize-multiple-band-structures:">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abicomp.py ebands *_GSR.nc
 </pre></div>
 
 </div>
@@ -14097,7 +13973,7 @@ to change output format. `-f None` to disable structure output.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">ElectronBandsPlotter</span><span class="p">()</span>
@@ -14136,34 +14012,6 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Post-processing-the-DFPT-results-available-in-the-MP-database">Post-processing the DFPT results available in the MP database<a class="anchor-link" href="#Post-processing-the-DFPT-results-available-in-the-MP-database">&#182;</a></h3><ul>
-<li>More than 1500 DFPT calculations done with abiflows (<a href="https://www.nature.com/articles/sdata201865">Petretto et al.</a>)</li>
-<li>Results available on the materials project website (including the <em>DDB</em> files) </li>
-</ul>
-<hr>
-
-<p>Let's assume we want to reuse the raw data for our research work:</p>
-<ul>
-<li>Handling 1500 tabs in the web browser is not feasible</li>
-<li>We need a <u>programmatic</u> interface to automate stuff. </li>
-</ul>
-<p>With python we can easily connect the different parts of the puzzle:</p>
-<ul>
-<li>REST API to get the raw data (<em>DDB</em>) from the MP database</li>
-<li>Computation of phonons, thermodinamical properties, Born effective charges, dielectric tensor, IR spectrum with ABINIT</li>
-<li>Post-processing with AbiPy</li>
-</ul>
-<p>For a more comprehensive discussion see this 
-<a href="https://nbviewer.jupyter.org/github/abinit/abitutorials/blob/master/abitutorials/ddb.ipynb">abitutorial</a></p>
-<!--
-The results for the rocksalt phase of MgO are available at https://materialsproject.org/materials/mp-1009129/
--->
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="How-to-use-DdbRobot-to-perform-convergence-studies">How to use DdbRobot to perform convergence studies<a class="anchor-link" href="#How-to-use-DdbRobot-to-perform-convergence-studies">&#182;</a></h2><p><!--
 We have performed DFPT calculations for a metallic system ($MgB_2$) and we 
 are interested in the effect of the k-sampling and the smearing on the vibrational properties.
@@ -14174,7 +14022,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="p">[</span>
@@ -14199,7 +14047,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define function to change labels:</span>
@@ -14220,7 +14068,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -14251,7 +14099,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_params_dataframe</span><span class="p">()</span>
@@ -14267,7 +14115,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -14365,7 +14213,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_lattice_dataframe</span><span class="p">()</span>
@@ -14381,7 +14229,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -14494,7 +14342,23 @@ the calculations.-->
 </div>
 </div>
 
-</div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dataframes can be exported to different formats: CSV, $Latex$, JSON, Excel, ...</li>
+<li>High-level plotting interface provided by <a href="https://seaborn.pydata.org/">seaborn</a></li>
+<li>Explore your <em>DataFrames</em> inside <em>jupyter</em> with <a href="https://github.com/quantopian/qgrid">qgrid</a></li>
+<li>Use <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_clipboard.html#pandas-dataframe-to-clipboard">ene_table.to_clipboard()</a> 
+to copy to clipboard and paste into spreadsheet editor</li>
+</ul>
+
+</div>
+</div>
+</div>
+</aside></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14504,7 +14368,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Invoke anaddb and store results</span>
@@ -14549,7 +14413,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_electrons_and_phonons</span><span class="p">(</span><span class="n">mpids</span><span class="p">):</span>
@@ -14591,7 +14455,7 @@ the calculations.-->
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_electrons_and_phonons</span><span class="p">(</span><span class="n">mpids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mp-149&quot;</span><span class="p">,</span> <span class="s2">&quot;mp-66&quot;</span><span class="p">]);</span> <span class="c1"># Si and Diamond</span>
@@ -14604,20 +14468,6 @@ the calculations.-->
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-magenta-fg">Structure object does not have symmetry operations computed from Abinit.
-Calling spglib to get symmetry operations.</span>
-<span class="ansi-magenta-fg">Structure object does not have symmetry operations computed from Abinit.
-Calling spglib to get symmetry operations.</span>
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -14644,20 +14494,6 @@ Calling spglib to get symmetry operations.</span>
 <h5 id="Qualitative-analysis-of-possible-e-ph-scattering-channels-with-less-than-20-lines-of-code!">Qualitative analysis of possible e-ph scattering channels with less than 20 lines of code!<a class="anchor-link" href="#Qualitative-analysis-of-possible-e-ph-scattering-channels-with-less-than-20-lines-of-code!">&#182;</a></h5>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#from pseudo_dojo.core.pseudos import OfficialDojoTable</span>
-<span class="c1">#pseudo_table = OfficialDojoTable.from_dojodir(&#39;ONCVPSP-PBEsol-PDv0.4&#39;,&#39;standard&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14677,9 +14513,8 @@ Calling spglib to get symmetry operations.</span>
 <li>Optional arguments to change the default behaviour (smearing="gaussian:0.1 eV")</li>
 <li>For a command line interface, use the <em>abinp.py</em> script.</li>
 </ul>
-<h4 id="To-build-an-input-for-SCF+NSCF-run-with-(relaxed)-structure-from-the-materials-project-database:">To build an input for SCF+NSCF run with (relaxed) structure from the materials project database:<a class="anchor-link" href="#To-build-an-input-for-SCF+NSCF-run-with-(relaxed)-structure-from-the-materials-project-database:">&#182;</a></h4>
+<h4 id="To-build-an-(initial)-input-for-SCF+NSCF-run-with-(relaxed)-structure-from-the-materials-project-database:">To build an (initial) input for SCF+NSCF run with (relaxed) structure from the materials project database:<a class="anchor-link" href="#To-build-an-(initial)-input-for-SCF+NSCF-run-with-(relaxed)-structure-from-the-materials-project-database:">&#182;</a></h4>
 <pre><code>    abinp.py ebands mp-149 
-
 
 </code></pre>
 <h3 id="Some-examples...">Some examples...<a class="anchor-link" href="#Some-examples...">&#182;</a></h3>
@@ -14700,7 +14535,7 @@ Calling spglib to get symmetry operations.</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">ebands_input</span><span class="p">(</span><span class="n">structure</span><span class="o">=</span><span class="s2">&quot;si.cif&quot;</span><span class="p">,</span> 
@@ -14723,7 +14558,7 @@ Calling spglib to get symmetry operations.</span>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -14793,45 +14628,6 @@ Calling spglib to get symmetry operations.</span>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Inside-the-notebook,-one-gets-the-HTML-representation-with-links-to-the-documentation:">Inside the notebook, one gets the HTML representation with links to the documentation:<a class="anchor-link" href="#Inside-the-notebook,-one-gets-the-HTML-representation-with-links-to-the-documentation:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[64]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-############################################################################################<br>#                                       SECTION: basic                                      <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/basic#ecut" target="_blank">ecut</a> 8<br> <a href="https://docs.abinit.org/variables/basic#ngkpt" target="_blank">ngkpt</a> 8 8 8<br> <a href="https://docs.abinit.org/variables/basic#shiftk" target="_blank">shiftk</a>    0.5    0.5    0.5<br> <a href="https://docs.abinit.org/variables/basic#nshiftk" target="_blank">nshiftk</a> 1<br> <a href="https://docs.abinit.org/variables/basic#kptopt" target="_blank">kptopt</a> 1<br> <a href="https://docs.abinit.org/variables/basic#nsppol" target="_blank">nsppol</a> 1<br> <a href="https://docs.abinit.org/variables/basic#nband" target="_blank">nband</a> 8<br> <a href="https://docs.abinit.org/variables/basic#tolvrs" target="_blank">tolvrs</a> 1e-08<br>############################################################################################<br>#                                      SECTION: gstate                                      <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/gstate#chksymbreak" target="_blank">chksymbreak</a> 0<br> <a href="https://docs.abinit.org/variables/gstate#nspinor" target="_blank">nspinor</a> 1<br> <a href="https://docs.abinit.org/variables/gstate#nspden" target="_blank">nspden</a> 1<br> <a href="https://docs.abinit.org/variables/gstate#charge" target="_blank">charge</a> 0.0<br>############################################################################################<br>#                                         STRUCTURE                                         <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/basic#natom" target="_blank">natom</a> 2<br> <a href="https://docs.abinit.org/variables/basic#ntypat" target="_blank">ntypat</a> 1<br> <a href="https://docs.abinit.org/variables/basic#typat" target="_blank">typat</a> 1 1<br> <a href="https://docs.abinit.org/variables/basic#znucl" target="_blank">znucl</a> 14<br> <a href="https://docs.abinit.org/variables/basic#xred" target="_blank">xred</a><br>    0.0000000000    0.0000000000    0.0000000000<br>    0.2500000000    0.2500000000    0.2500000000<br> <a href="https://docs.abinit.org/variables/basic#acell" target="_blank">acell</a>    1.0    1.0    1.0<br> <a href="https://docs.abinit.org/variables/basic#rprim" target="_blank">rprim</a><br>    6.3285005272    0.0000000000    3.6537614829<br>    2.1095001757    5.9665675167    3.6537614829<br>    0.0000000000    0.0000000000    7.3075229659
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="$GW$-calculations-with-the-plasmon-pole-model.-The-calculation-consists-of:">$GW$ calculations with the plasmon-pole model. The calculation consists of:<a class="anchor-link" href="#$GW$-calculations-with-the-plasmon-pole-model.-The-calculation-consists-of:">&#182;</a></h4><ol>
 <li>GS run to compute the density </li>
 <li>nscf-run to produce a WFK file with <em>nscf_nband</em> states</li>
@@ -14843,7 +14639,7 @@ Calling spglib to get symmetry operations.</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">g0w0_with_ppmodel_inputs</span><span class="p">(</span>
@@ -14864,7 +14660,7 @@ Calling spglib to get symmetry operations.</span>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -14953,7 +14749,7 @@ Calling spglib to get symmetry operations.</span>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_scf_input</span><span class="p">(</span><span class="n">ecut</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ngkpt</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)):</span>
@@ -14994,7 +14790,7 @@ Calling spglib to get symmetry operations.</span>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_flow_alas_phonons</span><span class="p">():</span>
@@ -15024,7 +14820,7 @@ Calling spglib to get symmetry operations.</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">flow_phbands</span> <span class="o">=</span> <span class="n">build_flow_alas_phonons</span><span class="p">()</span>
@@ -15041,7 +14837,7 @@ Calling spglib to get symmetry operations.</span>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[68]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -15057,7 +14853,7 @@ Calling spglib to get symmetry operations.</span>
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 330)">
 <title>flow</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,26 -4,-330 479,-330 479,26 -4,26"/>
-<text text-anchor="start" x="78.0039" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=371, workdir=flow_alas_phonons</text>
+<text text-anchor="start" x="78.0039" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=503, workdir=flow_alas_phonons</text>
 <g id="clust1" class="cluster">
 <title>clusterw0</title>
 <path fill="#e0eeee" stroke="#000000" d="M205.3218,-148.8079C205.3218,-148.8079 257.3218,-148.8079 257.3218,-148.8079 263.3218,-148.8079 269.3218,-154.8079 269.3218,-160.8079 269.3218,-160.8079 269.3218,-210.8079 269.3218,-210.8079 269.3218,-216.8079 263.3218,-222.8079 257.3218,-222.8079 257.3218,-222.8079 205.3218,-222.8079 205.3218,-222.8079 199.3218,-222.8079 193.3218,-216.8079 193.3218,-210.8079 193.3218,-210.8079 193.3218,-160.8079 193.3218,-160.8079 193.3218,-154.8079 199.3218,-148.8079 205.3218,-148.8079"/>
