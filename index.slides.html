@@ -13247,19 +13247,16 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="New-features-of-AbiPy-v0.7">New features of AbiPy v0.7<a class="anchor-link" href="#New-features-of-AbiPy-v0.7">&#182;</a></h1><h3 id="M.-Giantomassi-and-the-AbiPy-group">M. Giantomassi and the AbiPy group<a class="anchor-link" href="#M.-Giantomassi-and-the-AbiPy-group">&#182;</a></h3><p>9th international ABINIT developer workshop 20-22nd May 2019 - Louvain-la-Neuve, Belgium</p>
-<!-- link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" -->
-
-<p><img src="./assets/intro_logos.png" width="85%" heigh="15%" align="center"></p>
+<h1 id="New-features-of-AbiPy-v0.7">New features of AbiPy v0.7<a class="anchor-link" href="#New-features-of-AbiPy-v0.7">&#182;</a></h1><h3 id="M.-Giantomassi-and-the-AbiPy-group">M. Giantomassi and the AbiPy group<a class="anchor-link" href="#M.-Giantomassi-and-the-AbiPy-group">&#182;</a></h3><p>9th international ABINIT developer workshop<br> 
+<small>20-22nd May 2019 - Louvain-la-Neuve, Belgium</small></p>
+<p><!-- link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" -->
+<img src="./assets/intro_logos.png" width="85%" heigh="15%" align="center"></p>
 <hr> 
 
 <ul>
-<li><p>These slides have been generated using <a href="https://jupyter.org">jupyter</a>, <a href="https://github.com/jupyter/nbconvert">nbconvert</a> and <a href="https://revealjs.com/">revealjs</a></p>
-</li>
-<li><p>The notebook can be downloaded from this <a href="https://github.com/gmatteo/abipy_intro_abidev2019">github repo</a></p>
-</li>
-<li><p>To install and configure the software, follow these <a href="https://github.com/abinit/abipy#getting-abipy">installation instructions</a></p>
-</li>
+<li>These slides have been generated using <a href="https://jupyter.org">jupyter</a>, <a href="https://github.com/jupyter/nbconvert">nbconvert</a> and <a href="https://revealjs.com/">revealjs</a></li>
+<li>The notebook can be downloaded from this <a href="https://github.com/gmatteo/abipy_intro_abidev2019">github repo</a></li>
+<li>To install and configure the software, follow these <a href="https://github.com/abinit/abipy#getting-abipy">installation instructions</a></li>
 </ul>
 <p>Use the Space key to navigate through all slides.</p>
 
@@ -13275,6 +13272,7 @@ a.anchor-link {
 <li>Post-processing output results (<em>netcdf</em> and <em>text</em> files)</li>
 <li>Interfacing ABINIT with external tools (e.g. <a href="http://jp-minerals.org/vesta/en/">Vesta</a>)</li>
 <li>Creating and executing workflows (band structures, phonons, $GW$…)</li>
+<li>High-throughput applications (<a href="https://github.com/abinit/abiflows">abiflows</a>, <a href="https://github.com/materialsproject/fireworks">fireworks</a>, <a href="https://www.mongodb.com/">mongodb</a></li>
 </ul>
 <!--
 #### Project:
@@ -13283,59 +13281,21 @@ a.anchor-link {
 * Used by developers to validate, profile and optimize ABINIT
 * Hosted on [github](https://github.com/abinit/abipy) 
 * Release under the GPLv2 license
+
+#### Layered structure designed for different use-cases:
+
+* Extend the pymatgen code-base with ABINIT-specific objects
+* Post-processing tools and command-line interfaces
+* API to automate calculations and data analysis
+)
 -->
 
-<p>Layered structure designed for different use-cases:</p>
-<ul>
-<li>Extend the pymatgen code-base with ABINIT-specific objects</li>
-<li>Post-processing tools and command-line interfaces</li>
-<li>API to automate calculations and data analysis</li>
-<li>High-throughput infrastructure (<a href="https://github.com/abinit/abiflows">abiflows</a>, <a href="https://github.com/materialsproject/fireworks">fireworks</a>, <a href="https://www.mongodb.com/">mongodb</a>)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Why-python?">Why python?<a class="anchor-link" href="#Why-python?">&#182;</a></h2><ul>
+<h4 id="Why-python?">Why python?<a class="anchor-link" href="#Why-python?">&#182;</a></h4><ul>
 <li>Easy to use and to learn</li>
 <li>Great support for science (<a href="http://www.numpy.org/">numpy</a>, <a href="https://www.scipy.org/">scipy</a>, <a href="http://pandas.pydata.org/">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a> …)</li>
 <li>Interactive environments (<a href="http://ipython.org/">ipython</a>, <a href="https://jupyter.org/">jupyter notebooks</a>, GUIs)</li>
 <li>More powerful and flexible than Fortran for implementing the high-level logic needed in modern ab-initio workflows</li>
 <li><a href="https://github.com/materialsproject">pymatgen</a> ecosystem and the <a href="https://www.materialsproject.org/">materials project database</a>…</li>
-</ul>
-<p><img src="./assets/pydata_stack.png" width="65%" align="center"></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="AbiPy-design-principles">AbiPy design principles<a class="anchor-link" href="#AbiPy-design-principles">&#182;</a></h2><ul>
-<li>Extend the pymatgen code-base with ABINIT-specific objects</li>
-<li><p>Layered structure designed for different use-cases:</p>
-<ul>
-<li>Post-processing tools and command-line interfaces</li>
-<li>API to automate calculations and data analysis</li>
-<li>High-throughput infrastructure (<a href="https://github.com/abinit/abiflows">abiflows</a>, <a href="https://github.com/materialsproject/fireworks">fireworks</a>, <a href="https://www.mongodb.com/">mongodb</a>)</li>
-</ul>
-</li>
-<li><p>Closely connected to the ABINIT executable:</p>
-<ul>
-<li>CPU-intensive algorithms performed by ABINIT (Fortran + MPI + OpenMP)</li>
-<li>Glue code implemented in python</li>
-</ul>
-</li>
-<li><p>ABINIT and AbiPy communicate through <a href="https://www.unidata.ucar.edu/software/netcdf/docs/">netcdf</a> files</p>
-<ul>
-<li>Portable binary format implemented in C</li>
-<li>Fortran/Python bindings and support for parallel MPI-IO (HDF5)</li>
-<li><a href="https://www.etsf.eu/fileformats">ETSF-IO specifications</a> for crystalline structures, wavefunctions, densities…</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -13483,10 +13443,11 @@ https://anaconda.org/abinit/abipy
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="./assets/Data-Analysis.jpg" width="95%" align="center"></p>
 <ul>
-<li>Since AbiPy is not just high-throughput, we'll show how to use the terminal to analyze calculations</li>
-<li>Well, a python script would be much more flexible but the goal here is to show 
-that one can replace <code>grep</code> with AbiPy</li>
-<li>PS: The majority of the examples will work independently of the file extension (especially if it's a netcdf file)</li>
+<li><p>Since AbiPy is not just high-throughput, we'll show how to use the terminal to analyze calculations</p>
+</li>
+<li><p>Well, a python script would be much more flexible but the goal here is to show 
+that one can replace <em>grep</em>, <em>vim</em>, <em>gnuplot</em> with AbiPy</p>
+</li>
 </ul>
 <div class="alert alert-warning">
 No perl scripts were harmed in the making of this notebook
@@ -13499,7 +13460,7 @@ No perl scripts were harmed in the making of this notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Command-line-interface">Command line interface<a class="anchor-link" href="#Command-line-interface">&#182;</a></h2><ul>
 <li><em>abistruct.py</em> ➝ Operate on crystalline structures read from file</li>
-<li><em>abiopen.py</em> ➝ Open output files inside Ipython, print/visualize file</li>
+<li><em>abiopen.py</em> ➝ Open output files inside Ipython or print/visualize file</li>
 <li><em>abicomp.py</em> ➝ Compare multiple files (convergence studies)</li>
 <li><em>abiview.py</em> ➝ Quick visualization of output files</li>
 <li><em>abinp.py</em> ➝ Generate input files for typical calculations</li>
@@ -13508,15 +13469,13 @@ No perl scripts were harmed in the making of this notebook
 <li><code>abistruct.py --help</code> for manpage</li>
 <li><code>abistruct.py COMMAND --help</code> for help about <code>COMMAND</code></li>
 </ul>
-<hr>
-
-<p>HTML documentation available at <a href="http://abinit.github.io/abipy/scripts/index.html">http://abinit.github.io/abipy/scripts/index.html</a></p>
+<p><hr>
+HTML documentation available at <a href="http://abinit.github.io/abipy/scripts/index.html">http://abinit.github.io/abipy/scripts/index.html</a></p>
 <h3 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h3><p></p><div class="highlight"><pre><span></span>abistruct.py spglib si_scf_GSR.nc
 abistruct.py convert si_scf_GSR.nc -f cif
 abiopen.py si_scf_GSR.nc --print
 </pre></div>
-<p>and many more...</p>
-
+<h3 id="and-many-more...">and many more...<a class="anchor-link" href="#and-many-more...">&#182;</a></h3>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13553,7 +13512,7 @@ abiopen.py si_scf_GSR.nc --print
 Name: si_scf_GSR.nc
 Directory: /Users/gmatteo/talks/abipy_intro_abidev2019
 Size: 14.83 kb
-Access Time: Wed May 15 02:06:56 2019
+Access Time: Wed May 15 15:06:48 2019
 Modification Time: Sun May 12 04:20:35 2019
 Change Time: Sun May 12 04:20:35 2019
 
@@ -13571,7 +13530,7 @@ Sites (2)
 Abinit Spacegroup: spgid: 227, num_spatial_symmetries: 48, has_timerev: True, symmorphic: True
 
 Stress tensor (Cartesian coordinates in GPa):
-[[5.21161758e+00 7.86452261e-11 0.00000000e+00]
+
  [7.86452261e-11 5.21161758e+00 0.00000000e+00]
  [0.00000000e+00 0.00000000e+00 5.21161758e+00]]
 
@@ -13617,7 +13576,7 @@ Conduction minimum located at:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="abiopen.py-works-supports-output-files-(&quot;abo&quot;):"><em>abiopen.py</em> works supports output files ("abo"):<a class="anchor-link" href="#abiopen.py-works-supports-output-files-(&quot;abo&quot;):">&#182;</a></h4>
+<h4 id="abiopen.py-works-supports-output-files-(abo-extension):"><em>abiopen.py</em> works supports output files (<em>abo</em> extension):<a class="anchor-link" href="#abiopen.py-works-supports-output-files-(abo-extension):">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14078,7 +14037,7 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB">Call <em>anaddb</em> to compute and visualize ph-bands and DOS from DDB<a class="anchor-link" href="#Call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py ddb ZnSe_hex_qpt_DDB --seaborn
+<h4 id="Need-to-call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB?">Need to call <em>anaddb</em> to compute and visualize ph-bands and DOS from DDB?<a class="anchor-link" href="#Need-to-call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py ddb ZnSe_hex_qpt_DDB --seaborn
 </pre></div>
 
 </div>
@@ -14113,7 +14072,7 @@ to change output format. `-f None` to disable structure output.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="To-compare-multiple-structures">To compare multiple structures<a class="anchor-link" href="#To-compare-multiple-structures">&#182;</a></h4><p>Note shell wildcard characters and Unix <code>find</code> inside backticks</p>
+<h4 id="To-compare-multiple-structures">To compare multiple structures<a class="anchor-link" href="#To-compare-multiple-structures">&#182;</a></h4><p><small>Note shell wildcard characters and Unix `find` inside backticks</small></p>
 
 </div>
 </div>
@@ -14255,7 +14214,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="p">[</span>
@@ -14280,7 +14239,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define function to change labels:</span>
@@ -14301,7 +14260,7 @@ are interested in the effect of the k-sampling and the smearing on the vibration
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14332,7 +14291,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_params_dataframe</span><span class="p">()</span>
@@ -14348,7 +14307,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14446,7 +14405,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_lattice_dataframe</span><span class="p">()</span>
@@ -14462,7 +14421,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14599,7 +14558,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Invoke anaddb and store results</span>
@@ -14644,7 +14603,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_electrons_and_phonons</span><span class="p">(</span><span class="n">mpids</span><span class="p">):</span>
@@ -14686,7 +14645,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_electrons_and_phonons</span><span class="p">(</span><span class="n">mpids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mp-149&quot;</span><span class="p">,</span> <span class="s2">&quot;mp-66&quot;</span><span class="p">]);</span> <span class="c1"># Si and Diamond</span>
@@ -14740,7 +14699,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">ebands_input</span><span class="p">(</span><span class="n">structure</span><span class="o">=</span><span class="s2">&quot;si.cif&quot;</span><span class="p">,</span> 
@@ -14763,7 +14722,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14833,6 +14792,45 @@ to copy to clipboard and paste into spreadsheet editor</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Inside-the-notebook,-one-gets-the-HTML-representation-with-links-to-the-documentation:">Inside the notebook, one gets the HTML representation with links to the documentation:<a class="anchor-link" href="#Inside-the-notebook,-one-gets-the-HTML-representation-with-links-to-the-documentation:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+############################################################################################<br>#                                       SECTION: basic                                      <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/basic#ecut" target="_blank">ecut</a> 8<br> <a href="https://docs.abinit.org/variables/basic#ngkpt" target="_blank">ngkpt</a> 8 8 8<br> <a href="https://docs.abinit.org/variables/basic#shiftk" target="_blank">shiftk</a>    0.5    0.5    0.5<br> <a href="https://docs.abinit.org/variables/basic#nshiftk" target="_blank">nshiftk</a> 1<br> <a href="https://docs.abinit.org/variables/basic#kptopt" target="_blank">kptopt</a> 1<br> <a href="https://docs.abinit.org/variables/basic#nsppol" target="_blank">nsppol</a> 1<br> <a href="https://docs.abinit.org/variables/basic#nband" target="_blank">nband</a> 8<br> <a href="https://docs.abinit.org/variables/basic#tolvrs" target="_blank">tolvrs</a> 1e-08<br>############################################################################################<br>#                                      SECTION: gstate                                      <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/gstate#chksymbreak" target="_blank">chksymbreak</a> 0<br> <a href="https://docs.abinit.org/variables/gstate#nspinor" target="_blank">nspinor</a> 1<br> <a href="https://docs.abinit.org/variables/gstate#nspden" target="_blank">nspden</a> 1<br> <a href="https://docs.abinit.org/variables/gstate#charge" target="_blank">charge</a> 0.0<br>############################################################################################<br>#                                         STRUCTURE                                         <br>############################################################################################<br> <a href="https://docs.abinit.org/variables/basic#natom" target="_blank">natom</a> 2<br> <a href="https://docs.abinit.org/variables/basic#ntypat" target="_blank">ntypat</a> 1<br> <a href="https://docs.abinit.org/variables/basic#typat" target="_blank">typat</a> 1 1<br> <a href="https://docs.abinit.org/variables/basic#znucl" target="_blank">znucl</a> 14<br> <a href="https://docs.abinit.org/variables/basic#xred" target="_blank">xred</a><br>    0.0000000000    0.0000000000    0.0000000000<br>    0.2500000000    0.2500000000    0.2500000000<br> <a href="https://docs.abinit.org/variables/basic#acell" target="_blank">acell</a>    1.0    1.0    1.0<br> <a href="https://docs.abinit.org/variables/basic#rprim" target="_blank">rprim</a><br>    6.3285005272    0.0000000000    3.6537614829<br>    2.1095001757    5.9665675167    3.6537614829<br>    0.0000000000    0.0000000000    7.3075229659
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="$GW$-calculations-with-the-plasmon-pole-model.-The-calculation-consists-of:">$GW$ calculations with the plasmon-pole model. The calculation consists of:<a class="anchor-link" href="#$GW$-calculations-with-the-plasmon-pole-model.-The-calculation-consists-of:">&#182;</a></h4><ol>
 <li>GS run to compute the density </li>
 <li>nscf-run to produce a WFK file with <em>nscf_nband</em> states</li>
@@ -14844,7 +14842,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">g0w0_with_ppmodel_inputs</span><span class="p">(</span>
@@ -14865,7 +14863,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14954,7 +14952,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_scf_input</span><span class="p">(</span><span class="n">ecut</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ngkpt</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)):</span>
@@ -14995,7 +14993,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_flow_alas_phonons</span><span class="p">():</span>
@@ -15025,7 +15023,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">flow_phbands</span> <span class="o">=</span> <span class="n">build_flow_alas_phonons</span><span class="p">()</span>
@@ -15042,7 +15040,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15058,7 +15056,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 330)">
 <title>flow</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,26 -4,-330 479,-330 479,26 -4,26"/>
-<text text-anchor="start" x="78.0039" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=692, workdir=flow_alas_phonons</text>
+<text text-anchor="start" x="78.0039" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=758, workdir=flow_alas_phonons</text>
 <g id="clust1" class="cluster">
 <title>clusterw0</title>
 <path fill="#e0eeee" stroke="#000000" d="M205.3218,-148.8079C205.3218,-148.8079 257.3218,-148.8079 257.3218,-148.8079 263.3218,-148.8079 269.3218,-154.8079 269.3218,-160.8079 269.3218,-160.8079 269.3218,-210.8079 269.3218,-210.8079 269.3218,-216.8079 263.3218,-222.8079 257.3218,-222.8079 257.3218,-222.8079 205.3218,-222.8079 205.3218,-222.8079 199.3218,-222.8079 193.3218,-216.8079 193.3218,-210.8079 193.3218,-210.8079 193.3218,-160.8079 193.3218,-160.8079 193.3218,-154.8079 199.3218,-148.8079 205.3218,-148.8079"/>
