@@ -13335,7 +13335,7 @@ https://anaconda.org/abinit/abipy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">embed</span> https://abinit.github.io/abipy/index.html
@@ -13351,7 +13351,7 @@ https://anaconda.org/abinit/abipy
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -13382,7 +13382,7 @@ https://anaconda.org/abinit/abipy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">embed</span> https://nbviewer.jupyter.org/github/abinit/abitutorials/blob/master/abitutorials/index.ipynb
@@ -13398,7 +13398,7 @@ https://anaconda.org/abinit/abipy
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -13470,7 +13470,7 @@ abiopen.py si_scf_GSR.nc --print
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abiopen.py si_scf_GSR.nc --print
@@ -13494,7 +13494,7 @@ abiopen.py si_scf_GSR.nc --print
 Name: si_scf_GSR.nc
 Directory: /Users/gmatteo/talks/abipy_intro_abidev2019
 Size: 14.83 kb
-Access Time: Sun May 19 20:19:13 2019
+Access Time: Sun May 19 20:26:25 2019
 Modification Time: Sun May 12 04:20:35 2019
 Change Time: Sun May 12 04:20:35 2019
 
@@ -13571,7 +13571,7 @@ Conduction minimum located at:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abiopen.py gs_dfpt.abo -p 
@@ -13653,7 +13653,7 @@ dataset
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abiopen.py run.log -p 
@@ -13738,7 +13738,7 @@ num_errors: 0, num_warnings: 4, num_comments: 4, completed: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py convert si_scf_GSR.nc -f cif
@@ -13814,7 +13814,7 @@ loop_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py kpath si_scf_GSR.nc
@@ -13882,7 +13882,7 @@ loop_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py mp_match si_scf_GSR.nc
@@ -13953,7 +13953,7 @@ loop_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py mp_search LiF
@@ -14116,9 +14116,9 @@ mp-1138     2.887419  2.887419  2.887419   60.0  60.0   60.000000
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Want-to-know-what's-happening-in-the-structural-relaxation?">Want to know what's happening in the structural relaxation?<a class="anchor-link" href="#Want-to-know-what's-happening-in-the-structural-relaxation?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py hist sic_relax_HIST.nc
 </pre></div>
-<p><p></p>
-<img src="assets/abiview_hist.png" width="55%" align="center"></p>
-
+<center>
+<img src="assets/abiview_hist.png" width="60%" align="center">
+</center>
 </div>
 </div>
 </div>
@@ -14176,7 +14176,7 @@ mp-1138     2.887419  2.887419  2.887419   60.0  60.0   60.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abicomp.py structure *.cif si_nscf_GSR.nc <span class="sb">`</span>find . -name *_DDB<span class="sb">`</span>
@@ -14234,7 +14234,7 @@ ZnSe_hex_qpt_DDB           hexagonal
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#plotter = abilab.ElectronBandsPlotter()</span>
@@ -14268,7 +14268,7 @@ ZnSe_hex_qpt_DDB           hexagonal
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="p">[</span>
@@ -14293,7 +14293,7 @@ ZnSe_hex_qpt_DDB           hexagonal
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define function to change labels:</span>
@@ -14314,7 +14314,7 @@ ZnSe_hex_qpt_DDB           hexagonal
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[71]:</div>
 
 
 
@@ -14345,7 +14345,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_params_dataframe</span><span class="p">()</span>
@@ -14361,7 +14361,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[72]:</div>
 
 
 
@@ -14459,7 +14459,7 @@ the calculations.-->
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">get_lattice_dataframe</span><span class="p">()</span>
@@ -14475,7 +14475,7 @@ the calculations.-->
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[73]:</div>
 
 
 
@@ -14615,7 +14615,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Invoke anaddb and store results</span>
@@ -14665,7 +14665,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">abilab</span><span class="o">.</span><span class="n">ebands_input</span><span class="p">(</span><span class="n">structure</span><span class="o">=</span><span class="s2">&quot;si.cif&quot;</span><span class="p">,</span> 
@@ -14688,7 +14688,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[50]:</div>
+    <div class="prompt output_prompt">Out[77]:</div>
 
 
 
@@ -14764,7 +14764,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_scf_input</span><span class="p">(</span><span class="n">ecut</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ngkpt</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)):</span>
@@ -14811,7 +14811,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">make_scf_input</span><span class="p">()</span>
@@ -14827,7 +14827,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[80]:</div>
 
 
 
@@ -14850,7 +14850,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_flow_alas_phonons</span><span class="p">():</span>
@@ -14880,7 +14880,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">flow_phbands</span> <span class="o">=</span> <span class="n">build_flow_alas_phonons</span><span class="p">()</span>
@@ -14897,7 +14897,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[82]:</div>
 
 
 
@@ -14913,7 +14913,7 @@ to copy to clipboard and paste into spreadsheet editor</li>
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 330)">
 <title>flow</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,26 -4,-330 479,-330 479,26 -4,26"/>
-<text text-anchor="start" x="74.7603" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=1185, workdir=flow_alas_phonons</text>
+<text text-anchor="start" x="74.5039" y="15.2" font-family="Times,serif" font-size="14.00" fill="#000000">PhononFlow, node_id=1218, workdir=flow_alas_phonons</text>
 <g id="clust1" class="cluster">
 <title>clusterw0</title>
 <path fill="#e0eeee" stroke="#000000" d="M205.3218,-148.8079C205.3218,-148.8079 257.3218,-148.8079 257.3218,-148.8079 263.3218,-148.8079 269.3218,-154.8079 269.3218,-160.8079 269.3218,-160.8079 269.3218,-210.8079 269.3218,-210.8079 269.3218,-216.8079 263.3218,-222.8079 257.3218,-222.8079 257.3218,-222.8079 205.3218,-222.8079 205.3218,-222.8079 199.3218,-222.8079 193.3218,-216.8079 193.3218,-210.8079 193.3218,-210.8079 193.3218,-160.8079 193.3218,-160.8079 193.3218,-154.8079 199.3218,-148.8079 205.3218,-148.8079"/>
