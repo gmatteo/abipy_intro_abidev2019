@@ -13376,7 +13376,7 @@ https://anaconda.org/abinit/abipy
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Jupyter-notebooks-with-examples-and-lessons-inspired-to-the-official-tutorials">Jupyter notebooks with <a href="https://nbviewer.jupyter.org/github/abinit/abitutorials/blob/master/abitutorials/index.ipynb">examples and lessons</a> inspired to the official tutorials<a class="anchor-link" href="#Jupyter-notebooks-with-examples-and-lessons-inspired-to-the-official-tutorials">&#182;</a></h2><!-- img src="./assets/abipy_notebooks.png" width="100%" align="center" -->
+<h2 id="Jupyter-notebooks-with-examples-and-lessons-inspired-by-the-official-tutorials">Jupyter notebooks with <a href="https://nbviewer.jupyter.org/github/abinit/abitutorials/blob/master/abitutorials/index.ipynb">examples and lessons</a> inspired by the official tutorials<a class="anchor-link" href="#Jupyter-notebooks-with-examples-and-lessons-inspired-by-the-official-tutorials">&#182;</a></h2><!-- img src="./assets/abipy_notebooks.png" width="100%" align="center" -->
 </div>
 </div>
 </div>
@@ -13716,8 +13716,9 @@ num_errors: 0, num_warnings: 4, num_comments: 4, completed: True
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="If-you-are-still-using-perl-scripts-to-extract-data-from-the-main-output-file,-check-this-out:">If you are still using perl scripts to extract data from the main output file, check this out:<a class="anchor-link" href="#If-you-are-still-using-perl-scripts-to-extract-data-from-the-main-output-file,-check-this-out:">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiopen.py gs_dfpt.abo --expose --seaborn
 </pre></div>
-<p><img src="assets/abiopen_abo.png" width="75%" align="center"></p>
-<h4 id="The-introduction-of-Yaml-documents-in-the-main-output-(cfr.-Theo's-talk)-will-facilitate-the-implementation-of-new-post-processing-tools...">The introduction of Yaml documents in the main output (<em>cfr.</em> Theo's talk) will facilitate the implementation of new post-processing tools...<a class="anchor-link" href="#The-introduction-of-Yaml-documents-in-the-main-output-(cfr.-Theo's-talk)-will-facilitate-the-implementation-of-new-post-processing-tools...">&#182;</a></h4>
+<center>
+<img src="assets/abiopen_abo.png" width="75%" align="center">
+</center><h4 id="The-introduction-of-Yaml-documents-in-the-main-output-(cfr.-Theo's-talk)-will-facilitate-the-implementation-of-new-post-processing-tools...">The introduction of Yaml documents in the main output (<em>cfr.</em> Theo's talk) will facilitate the implementation of new post-processing tools...<a class="anchor-link" href="#The-introduction-of-Yaml-documents-in-the-main-output-(cfr.-Theo's-talk)-will-facilitate-the-implementation-of-new-post-processing-tools...">&#182;</a></h4>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13804,74 +13805,6 @@ loop_
 <h4 id="Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib--(Use---application-option)">Supports also <em>ovito</em>, <em>xcrysden</em>, <em>vtk</em>, <em>mayavi</em>, <em>matplotlib</em>  (Use <em>--application</em> option)<a class="anchor-link" href="#Supports-also-ovito,-xcrysden,-vtk,-mayavi,-matplotlib--(Use---application-option)">&#182;</a></h4>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Read-structure-from-FILE-and-print-ABINIT-variables-for-NSCF-along-k-path:">Read structure from FILE and print ABINIT variables for NSCF along k-path:<a class="anchor-link" href="#Read-structure-from-FILE-and-print-ABINIT-variables-for-NSCF-along-k-path:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>abistruct.py kpath si_scf_GSR.nc
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre># Abinit Structure
- natom 2
- ntypat 1
- typat 1 1
- znucl 14
- xred
-    0.0000000000    0.0000000000    0.0000000000
-    0.2500000000    0.2500000000    0.2500000000
- acell    1.0    1.0    1.0
- rprim
-    6.3285005521    0.0000000000    3.6537614973
-    2.1095001840    5.9665675402    3.6537614973
-    0.0000000000    0.0000000000    7.3075229946
-
-# K-path in reduced coordinates:
-# tolwfr 1e-20 iscf -2 getden ??
- ndivsm 10
- kptopt -11
- kptbounds
-    +0.00000  +0.00000  +0.00000  # $\Gamma$
-    +0.50000  +0.00000  +0.50000  # X
-    +0.50000  +0.25000  +0.75000  # W
-    +0.37500  +0.37500  +0.75000  # K
-    +0.00000  +0.00000  +0.00000  # $\Gamma$
-    +0.50000  +0.50000  +0.50000  # L
-    +0.62500  +0.25000  +0.62500  # U
-    +0.50000  +0.25000  +0.75000  # W
-    +0.50000  +0.50000  +0.50000  # L
-    +0.37500  +0.37500  +0.75000  # K
-    +0.62500  +0.25000  +0.62500  # U
-    +0.50000  +0.00000  +0.50000  # X
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14114,25 +14047,6 @@ mp-1138     2.887419  2.887419  2.887419   60.0  60.0   60.000000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Want-to-know-what's-happening-in-the-structural-relaxation?">Want to know what's happening in the structural relaxation?<a class="anchor-link" href="#Want-to-know-what's-happening-in-the-structural-relaxation?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py hist sic_relax_HIST.nc
-</pre></div>
-<center>
-<img src="assets/abiview_hist.png" width="60%" align="center">
-</center>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Want-a-GUI?">Want a GUI?<a class="anchor-link" href="#Want-a-GUI?">&#182;</a></h4><p>Use <em>--appname</em> for app in [avogadro, ovito, v_sim, vesta, xcrysden, mpl, mayavi, vtk]</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Need-to-call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB?">Need to call <em>anaddb</em> to compute and visualize ph-bands and DOS from DDB?<a class="anchor-link" href="#Need-to-call-anaddb-to-compute-and-visualize-ph-bands-and-DOS-from-DDB?">&#182;</a></h4><p></p><div class="highlight"><pre><span></span>abiview.py ddb ZnSe_hex_qpt_DDB --seaborn
 </pre></div>
 
@@ -14162,7 +14076,7 @@ mp-1138     2.887419  2.887419  2.887419   60.0  60.0   60.000000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="assets/abicomp.png" width="25%" align="center"></p>
+<p><img src="assets/abicomp.png" width="30%" align="center"></p>
 
 </div>
 </div>
@@ -14650,6 +14564,14 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="assets/abinp.png" width="30%" align="center"></p>
+
+</div>
+</div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15152,16 +15074,15 @@ to copy to clipboard and paste into spreadsheet editor</li>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Future-developments">Future developments<a class="anchor-link" href="#Future-developments">&#182;</a></h2><h3 id="Post-processing-tools">Post-processing tools<a class="anchor-link" href="#Post-processing-tools">&#182;</a></h3><ul>
-<li>Add support for more <em>netcdf</em> files</li>
+<li>Support for more <em>netcdf</em> files</li>
 <li>More post-processing tools for MD calculations</li>
 <li>More converters and interfaces for third-party applications</li>
-<li>Integrate AbiPy with JupyterLab to create a flexible graphical enviroment for Abinit exposing (part) 
+<li>Integrate AbiPy with <a href="https://github.com/jupyterlab/jupyterlab">jupyterlab</a> to create a flexible graphical enviroment for Abinit exposing (part) 
 of the python API </li>
-<li>Explore web-based technologies for data analysis and visualization based on <a href="https://plot.ly/">plotly</a> 
-and <a href="https://plot.ly/products/dash/">dash</a> </li>
-<li>Develop toolkit to build web apps powered by Abipy and pymatgen to disseminate scientific results. </li>
+<li>Explore web-based technologies for data analysis and visualization (<a href="https://plot.ly/">plotly</a>, <a href="https://plot.ly/products/dash/">dash</a>) </li>
+<li>Develop toolkit to build web apps powered by AbiPy and pymatgen to disseminate scientific results. </li>
 </ul>
-<h2 id="Integration-with-Abinit-Continuous-Integration">Integration with Abinit Continuous Integration<a class="anchor-link" href="#Integration-with-Abinit-Continuous-Integration">&#182;</a></h2><ul>
+<h2 id="Continuous-Integration">Continuous Integration<a class="anchor-link" href="#Continuous-Integration">&#182;</a></h2><ul>
 <li><p>Use AbiPy programmatic interface to implement:</p>
 <ul>
 <li>Validation of parallel algorithms for np in range(1, N)</li>
@@ -15173,6 +15094,19 @@ and <a href="https://plot.ly/products/dash/">dash</a> </li>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
